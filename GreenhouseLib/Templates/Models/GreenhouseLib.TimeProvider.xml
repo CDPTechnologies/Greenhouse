@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<Model Name="GreenhouseLib.TimeProvider" Version="2.0">
+ <ModelTypeClass>C++</ModelTypeClass>
+ <BaseModel>CDPComponent</BaseModel>
+ <Priority>normal</Priority>
+ <fs>1000</fs>
+ <Attributes>
+  <Attribute Name="Description" Type="string" Value="Simple component"/>
+  <Attribute Description="Implementation model used." Required="1" Name="Model" Type="string" SaveOnChange="0" ReadOnly="1" Value="GreenhouseLib.TimeProvider"/>
+ </Attributes>
+ <Signals>
+  <Signal Model="CDPSignal&lt;double&gt;" Description="Outputs real time or simulation time, if simulation is enabled." Name="CurrTime" Unit="s" Type="double" Input="0" Value="0"/>
+ </Signals>
+</Model>

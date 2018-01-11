@@ -1,0 +1,14 @@
+<Component Model='GreenhouseLib.TimeProvider' Name='TimeProvider' src='Components/TimeProvider.xml'  Description='Simple component'>
+  <fs>1000</fs>
+
+  <Signals>
+    <Signal Description='Process run time each s.' Input='0' Model='CDPSignal&lt;double&gt;' Name='Process Timer' Type='double' Unit='s/s'></Signal>
+    <Signal Description='Process interval [s].' Input='0' Model='CDPSignal&lt;double&gt;' Name='Process Period' Type='double' Unit='s'></Signal>
+    <Signal Description='Outputs real time or simulation time, if simulation is enabled.' Input='0' Model='CDPSignal&lt;double&gt;' Name='CurrTime' Type='double' Unit='s'>
+      <Operator Description='Set signal to specified value if prerequisites are met' Model='Automation.InterlockOperator&lt;double&gt;' Name='TimeSwitch' Type='double'  Comparator='='  CompareValueLeftRouted=''  CompareValueRightRouted='GreenhouseApp.SimulationEnvironment.Enable'  CompareValueRight='0'  SetValueRouting='GreenhouseApp.SimulationEnvironment.CurrSimUTCTime'  CompareValueLeft='1'></Operator></Signal>
+  </Signals>
+
+  <Alarms>
+    <Alarm Description='A component was suspended!' Enabled='1' Level='Warning' Model='CDPAlarm' Name='Component Suspended' Text='Component was suspended!'></Alarm>
+  </Alarms>
+</Component>

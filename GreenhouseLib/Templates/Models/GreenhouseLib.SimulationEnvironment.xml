@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<Model Version="2.0" Name="GreenhouseLib.SimulationEnvironment">
+ <ModelTypeClass>C++</ModelTypeClass>
+ <BaseModel>CDPComponent</BaseModel>
+ <Priority>normal</Priority>
+ <fs>1000</fs>
+ <Attributes>
+  <Attribute Type="string" Value="Simple component" Name="Description"/>
+  <Attribute ReadOnly="1" SaveOnChange="0" Required="1" Type="string" Value="GreenhouseLib.SimulationEnvironment" Name="Model" Description="Implementation model used."/>
+ </Attributes>
+ <Signals>
+  <Signal Type="bool" Model="CDPSignal&lt;bool&gt;" Value="true" Name="Enable" Input="0" Unit="" Description="Enables simulation. Allows overriding greenhouse sensor values with simulation ones."/>
+  <Signal Type="double" Model="CDPSignal&lt;double&gt;" Value="0" Name="CurrInsideTemp" Input="0" Unit="" Description="Simulates currrent inside temperature."/>
+  <Signal Type="bool" Model="CDPSignal&lt;bool&gt;" Value="0" Name="Ventilation" Input="1" Unit="" Description="Signal from a controller that notifies if ventilation has started or not."/>
+  <Signal Type="double" Model="CDPSignal&lt;double&gt;" Value="0" Name="CurrOutsideTemp" Input="0" Unit="" Description="Simulates current outside temperature."/>
+  <Signal Type="double" Model="CDPSignal&lt;double&gt;" Value="70" Name="CurrSoilMoisture" Input="0" Unit="" Description="Simulates current soil moisture."/>
+  <Signal Type="bool" Model="CDPSignal&lt;bool&gt;" Value="false" Name="Irrigating" Input="1" Unit="" Description="Signal from a controller that notifies if irrigation has started or not."/>
+  <Signal Type="double" Model="CDPSignal&lt;double&gt;" Value="0" Name="CurrSimUTCTime" Input="0" Unit="" Description="Current simulation time in seconds. Starts from 0 and increases."/>
+ </Signals>
+ <Parameters/>
+ <Element SaveOnChange="0" Type="int" LogEventOnChange="0" Value="1500" Name="SimSpeedMultiplier" RouteMethod="RouteEvent" Description="Simulation speed multiplier compared to real-time value."/>
+</Model>

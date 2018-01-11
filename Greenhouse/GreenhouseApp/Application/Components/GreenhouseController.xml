@@ -1,0 +1,33 @@
+<Component Model='GreenhouseLib.GreenhouseController' Name='GreenhouseController' src='Components/GreenhouseController.xml'  Description='Simple component'>
+  <CycleDuration>10</CycleDuration>
+  <IrrigationEndHour>2</IrrigationEndHour>
+  <IrrigationStartHour>22</IrrigationStartHour>
+  <MinAllowedInsideTemp>20</MinAllowedInsideTemp>
+  <MaxAllowedInsideTemp>27</MaxAllowedInsideTemp>
+  <WaterAbsorptionTime>20</WaterAbsorptionTime>
+  <MinAllowedSoilMoisture>30</MinAllowedSoilMoisture>
+  <MaxAllowedSoilMoisture>60</MaxAllowedSoilMoisture>
+  <fs>1000</fs>
+
+  <Signals>
+    <Signal Description='Process run time each s.' Input='0' Model='CDPSignal&lt;double&gt;' Name='Process Timer' Type='double' Unit='s/s'></Signal>
+    <Signal Description='Process interval [s].' Input='0' Model='CDPSignal&lt;double&gt;' Name='Process Period' Type='double' Unit='s'></Signal>
+    <Signal Description='Inside temperature current value.' Input='0' Model='CDPSignal&lt;double&gt;' Name='CurrInsideTemp' Type='double'  Routing='GreenhouseApp.I2CIOServer.InsideTemp.Temperature.CurrentValue'></Signal>
+    <Signal Description='Current value of outside temperature. ' Input='0' Model='CDPSignal&lt;double&gt;' Name='CurrOutsideTemp' Type='double'  Routing='GreenhouseApp.I2CIOServer.OutsideTemp.Temperature.CurrentValue'></Signal>
+    <Signal Description='Time in day.' Input='1' Model='CDPSignal&lt;double&gt;' Name='CurrTime' Type='double'  Routing='GreenhouseApp.TimeProvider.CurrTime'>
+      <Operator Description='Set signal to specified value if prerequisites are met' Model='Automation.InterlockOperator&lt;double&gt;' Name='InputSwitch' Type='double'  Comparator='='  CompareValueLeft='1'  CompareValueRightRouted='GreenhouseApp.SimulationEnvironment.Enable'  SetValueRouting='GreenhouseApp.SimulationEnvironment.CurrSimUTCTime'></Operator></Signal>
+    <Signal Description='Current state of irrigation. If true, then irrigation is on, else irritation is off.' Input='0' Model='CDPSignal&lt;bool&gt;' Name='Irrigating' Type='bool'></Signal>
+    <Signal Description='Output signal from controller to ventilation fan.' Input='0' Model='CDPSignal&lt;bool&gt;' Name='Ventilating' Type='bool'></Signal>
+    <Signal Description='Current value in percentage of soil moisture.' Input='0' Model='CDPSignal&lt;double&gt;' Name='CurrSoilMoisture' Type='double'  Routing='GreenhouseApp.ADS1115IOServer.A0'></Signal>
+    <Signal Description='The center of the allowed range.' Input='0' Model='CDPSignal&lt;double&gt;' Name='AllowedMoistureRangeCenter' Type='double'></Signal>
+    <Signal Description='The range beetween min and max.' Input='0' Model='CDPSignal&lt;double&gt;' Name='AllowedInsideTempRange' Type='double'></Signal>
+    <Signal Description='The center of the allowed range.' Input='0' Model='CDPSignal&lt;double&gt;' Name='AllowedInsideTempRangeCenter' Type='double'></Signal>
+    <Signal Description='The range beetween min and max.' Input='0' Model='CDPSignal&lt;double&gt;' Name='AllowedMoistureRange' Type='double'></Signal>
+    <Signal Description='Shows if Greenhouse controller can irrigate to maximum value. If false, then controller tries to keep minimum irrigation value.' Input='0' Model='CDPSignal&lt;bool&gt;' Name='MaxIrrigationIsAllowed' Type='bool'></Signal>
+  </Signals>
+
+  <Alarms>
+    <Alarm Description='A component was suspended!' Enabled='1' Level='Warning' Model='CDPAlarm' Name='Component Suspended' Text='Component was suspended!'></Alarm>
+  </Alarms>
+  
+</Component>

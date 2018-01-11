@@ -1,0 +1,7 @@
+<Library Name="GreenhouseLib">
+ <Models>
+  <Model Name="GreenhouseLib.GreenhouseController"/>
+  <Model Name="GreenhouseLib.SimulationEnvironment"/>
+  <Model Name="GreenhouseLib.TimeProvider"/>
+ </Models>
+</Library>
