@@ -5,8 +5,8 @@
 
 using namespace GreenhouseLib;
 
-const unsigned int SEC_IN_AN_HOUR = 60 * 60;
-const size_t SEC_IN_A_DAY = 24 * SEC_IN_AN_HOUR;
+const int SEC_IN_AN_HOUR = 60 * 60;
+const int SEC_IN_A_DAY = 24 * SEC_IN_AN_HOUR;
 
 GreenhouseController::GreenhouseController()
     : IrrigationStartTime(0)

@@ -1,3 +1,7 @@
+/**
+ * (c)2017 CDP Technologies AS
+ */
+
 #ifndef GREENHOUSELIB_TIMEPROVIDER_H
 #define GREENHOUSELIB_TIMEPROVIDER_H
 

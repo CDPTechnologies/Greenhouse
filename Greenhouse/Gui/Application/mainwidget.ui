@@ -653,7 +653,7 @@ Mode</string>
     <item>
      <widget class="CDPBaseStackedWidget" name="cdpBaseStackedWidget">
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="MainView">
        <layout class="QVBoxLayout" name="verticalLayout_19">

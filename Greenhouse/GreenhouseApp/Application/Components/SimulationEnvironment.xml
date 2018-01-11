@@ -5,7 +5,7 @@
   <Signals>
     <Signal Description='Process run time each s.' Input='0' Model='CDPSignal&lt;double&gt;' Name='Process Timer' Type='double' Unit='s/s'></Signal>
     <Signal Description='Process interval [s].' Input='0' Model='CDPSignal&lt;double&gt;' Name='Process Period' Type='double' Unit='s'></Signal>
-    <Signal Input='0' Model='CDPSignal&lt;bool&gt;' Name='Enable' Type='bool'  Value='0'  Unit=''  Description="Enables simulation. Allows overriding greenhouse sensor values with simulation ones."></Signal>
+    <Signal Input='0' Model='CDPSignal&lt;bool&gt;' Name='Enable' Type='bool'  Value='1'  Unit=''  Description="Enables simulation. Allows overriding greenhouse sensor values with simulation ones."></Signal>
     <Signal Description='Simulated curr inside temperature.' Input='0' Model='CDPSignal&lt;double&gt;' Name='CurrInsideTemp' Type='double'  Routing=''  Unit='°C'></Signal>
     <Signal Description='Signal from a controller that notifies if ventilation is on or off' Input='1' Model='CDPSignal&lt;double&gt;' Name='Ventilation' Type='double'  Routing='GreenhouseApp.GreenhouseController.Ventilating'></Signal>
     <Signal Description='Simulates current soil moisture.' Input='0' Model='CDPSignal&lt;double&gt;' Name='CurrSoilMoisture' Type='double' Value="70" Unit='%'></Signal>

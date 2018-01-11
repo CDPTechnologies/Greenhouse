@@ -9,6 +9,6 @@
   <Attribute Description="Implementation model used." Required="1" Name="Model" Type="string" SaveOnChange="0" ReadOnly="1" Value="GreenhouseLib.TimeProvider"/>
  </Attributes>
  <Signals>
-  <Signal Model="CDPSignal&lt;double&gt;" Description="Outputs real time or simulation time, if simulation is enabled." Name="CurrTime" Unit="s" Type="double" Input="0" Value="0"/>
+  <Signal Model="CDPSignal&lt;double&gt;" Description="Number of seconds since 1.1.1970." Name="CurrTime" Unit="s" Type="double" Input="0" Value="0"/>
  </Signals>
 </Model>
