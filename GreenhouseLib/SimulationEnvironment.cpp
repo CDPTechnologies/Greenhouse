@@ -12,7 +12,7 @@ const double SIN_FREQUENCY = 2 * M_PI / SEC_IN_A_DAY;
 const double SOIL_MOISTURE_DECREASE_IN_SEC = 0.00083;
 const double SOIL_MOISTURE_INCREASE_IN_SEC = 0.031;
 const short int SOIL_ABSORPTION_DELAY_IN_SEC = 10;
-const double INSIDE_TEMP_INCREASE_MULTIPLIER = 1.8;
+const double INSIDE_TEMP_CHANGE_MULTIPLIER = 1.8;
 
 SimulationEnvironment::SimulationEnvironment()
     : OutTempAmplitudeMultiplier(10)
@@ -87,7 +87,7 @@ double SimulationEnvironment::SimulateInsideTemp(double previousTime, double tim
 
 double SimulationEnvironment::ApproximateInsideTempChangeInTimeunit(double previousTime, double time) const
 {
-    return INSIDE_TEMP_INCREASE_MULTIPLIER * (SimulateOutsideTemp(time) - SimulateOutsideTemp(previousTime));
+    return INSIDE_TEMP_CHANGE_MULTIPLIER * (SimulateOutsideTemp(time) - SimulateOutsideTemp(previousTime));
 }
 
 double SimulationEnvironment::VentilationTempDecreaseInTimeunit(double previousTime, double time)
