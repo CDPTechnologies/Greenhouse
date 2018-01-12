@@ -18,7 +18,7 @@
     <Signal Description='Voltage difference between A0 and GND' Input='0' Model='CDPSignal&lt;short&gt;' Name='A0' Type='short'>
       <Operator Description='The ScalingOperator scales from one range and type to another range and type.' Model='Automation.ScalingOperator&lt;double&gt;' Name='ScalingOperator' Type='double'>
         <ScalingPoint InValue='0' Model='Automation.ScalingPoint&lt;double&gt;' Name='Min' OutValue='0' Type='double'></ScalingPoint>
-        <ScalingPoint InValue='32768' Model='Automation.ScalingPoint&lt;double&gt;' Name='Max' OutValue='100' Type='double'></ScalingPoint></Operator>
+        <ScalingPoint InValue='32767' Model='Automation.ScalingPoint&lt;double&gt;' Name='Max' OutValue='100' Type='double'></ScalingPoint></Operator>
       <Operator Description='Set signal to specified value if prerequisites are met' Model='Automation.InterlockOperator&lt;double&gt;' Name='InputSwitch' Type='double'  CompareValueRightRouted='GreenhouseApp.SimulationEnvironment.Enable'  Comparator='='  CompareValueLeft='1'  SetValueRouting='GreenhouseApp.SimulationEnvironment.CurrSoilMoisture'></Operator></Signal>
     <Signal Description='Voltage difference between A1 and GND' Input='0' Model='CDPSignal&lt;short&gt;' Name='A1' Type='short'></Signal>
     <Signal Description='Voltage difference between A2 and GND' Input='0' Model='CDPSignal&lt;short&gt;' Name='A2' Type='short'></Signal>
