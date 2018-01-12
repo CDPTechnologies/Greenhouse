@@ -1,0 +1,2843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="CDPBaseMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Greenhouse</string>
+  </property>
+  <property name="msgBoxBgSvg">
+   <string>:/themes/flat_light/backgrounds/bgMsgBox.svg</string>
+  </property>
+  <property name="msgBoxBtnSvg">
+   <string>:/themes/flat_light/buttons/buttonPlain.svg</string>
+  </property>
+  <property name="themeNight">
+   <string>flat_dark</string>
+  </property>
+  <property name="themeDay">
+   <string>flat_light</string>
+  </property>
+  <property name="numPadName" stdset="0">
+   <string>CDPBaseNumPad</string>
+  </property>
+  <property name="keyPadName" stdset="0">
+   <string>CDPBaseKeyPad</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_9">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="menu" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>140</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>135</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="widget_4" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>7</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget" native="true">
+            <layout class="QGridLayout" name="gridLayout_4">
+             <property name="leftMargin">
+              <number>18</number>
+             </property>
+             <property name="topMargin">
+              <number>18</number>
+             </property>
+             <property name="rightMargin">
+              <number>18</number>
+             </property>
+             <property name="bottomMargin">
+              <number>18</number>
+             </property>
+             <item row="0" column="0">
+              <widget class="CDPBasePicture" name="cdpBasePicture_4">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>59</height>
+                </size>
+               </property>
+               <property name="svgFile">
+                <string>:/themes/flat_light/pictures/cdpstudiologo.svg</string>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>10</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_2" native="true">
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <property name="spacing">
+              <number>1</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="CDPBaseButtonMenu" name="mainMenu">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+               <property name="textColor">
+                <color>
+                 <red>74</red>
+                 <green>74</green>
+                 <blue>74</blue>
+                </color>
+               </property>
+               <property name="cdpProperty" stdset="0">
+                <string/>
+               </property>
+               <property name="markerFont">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>13</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="markerSize">
+                <number>25</number>
+               </property>
+               <property name="m1SvgFile" stdset="0">
+                <string>:/themes/flat_light/markers/circleRed.svg</string>
+               </property>
+               <property name="m1Pos" stdset="0">
+                <enum>Qt::TopRightCorner</enum>
+               </property>
+               <property name="m1ShowNumber" stdset="0">
+                <bool>true</bool>
+               </property>
+               <property name="m1OffsetX" stdset="0">
+                <number>5</number>
+               </property>
+               <property name="m1OffsetY" stdset="0">
+                <number>6</number>
+               </property>
+               <property name="m2SvgFile" stdset="0">
+                <string>:/themes/flat_light/markers/circleYellow.svg</string>
+               </property>
+               <property name="m2Pos" stdset="0">
+                <enum>Qt::TopLeftCorner</enum>
+               </property>
+               <property name="m2ShowNumber" stdset="0">
+                <bool>true</bool>
+               </property>
+               <property name="m2OffsetX" stdset="0">
+                <number>5</number>
+               </property>
+               <property name="m2OffsetY" stdset="0">
+                <number>6</number>
+               </property>
+               <property name="svgFile">
+                <string>:/themes/flat_light/buttons/buttonMenu.svg</string>
+               </property>
+               <property name="margin">
+                <number>14</number>
+               </property>
+               <property name="spacing">
+                <number>4</number>
+               </property>
+               <property name="iconDiameter">
+                <number>0</number>
+               </property>
+               <property name="icon">
+                <string/>
+               </property>
+               <property name="iconChecked">
+                <string/>
+               </property>
+               <property name="text">
+                <string notr="true">Main</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="CDPBaseButtonMenu" name="tempMenu">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>false</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+               <property name="textColor">
+                <color>
+                 <red>74</red>
+                 <green>74</green>
+                 <blue>74</blue>
+                </color>
+               </property>
+               <property name="valueToEmit">
+                <number>1</number>
+               </property>
+               <property name="cdpProperty" stdset="0">
+                <string/>
+               </property>
+               <property name="markerFont">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>13</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="markerSize">
+                <number>25</number>
+               </property>
+               <property name="m1SvgFile" stdset="0">
+                <string>:/themes/flat_light/markers/circleRed.svg</string>
+               </property>
+               <property name="m1Pos" stdset="0">
+                <enum>Qt::TopRightCorner</enum>
+               </property>
+               <property name="m1ShowNumber" stdset="0">
+                <bool>true</bool>
+               </property>
+               <property name="m1OffsetX" stdset="0">
+                <number>5</number>
+               </property>
+               <property name="m1OffsetY" stdset="0">
+                <number>6</number>
+               </property>
+               <property name="m2SvgFile" stdset="0">
+                <string>:/themes/flat_light/markers/circleYellow.svg</string>
+               </property>
+               <property name="m2Pos" stdset="0">
+                <enum>Qt::TopLeftCorner</enum>
+               </property>
+               <property name="m2ShowNumber" stdset="0">
+                <bool>true</bool>
+               </property>
+               <property name="m2OffsetX" stdset="0">
+                <number>5</number>
+               </property>
+               <property name="m2OffsetY" stdset="0">
+                <number>6</number>
+               </property>
+               <property name="svgFile">
+                <string>:/themes/flat_light/buttons/buttonMenu.svg</string>
+               </property>
+               <property name="margin">
+                <number>14</number>
+               </property>
+               <property name="spacing">
+                <number>4</number>
+               </property>
+               <property name="iconDiameter">
+                <number>0</number>
+               </property>
+               <property name="icon">
+                <string/>
+               </property>
+               <property name="iconChecked">
+                <string/>
+               </property>
+               <property name="text">
+                <string notr="true">Temperature</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="CDPBaseButtonMenu" name="moistureMenu">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>false</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+               <property name="textColor">
+                <color>
+                 <red>74</red>
+                 <green>74</green>
+                 <blue>74</blue>
+                </color>
+               </property>
+               <property name="valueToEmit">
+                <number>2</number>
+               </property>
+               <property name="cdpProperty" stdset="0">
+                <string/>
+               </property>
+               <property name="markerFont">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>13</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="markerSize">
+                <number>25</number>
+               </property>
+               <property name="m1SvgFile" stdset="0">
+                <string>:/themes/flat_light/markers/circleRed.svg</string>
+               </property>
+               <property name="m1Pos" stdset="0">
+                <enum>Qt::TopRightCorner</enum>
+               </property>
+               <property name="m1ShowNumber" stdset="0">
+                <bool>true</bool>
+               </property>
+               <property name="m1OffsetX" stdset="0">
+                <number>5</number>
+               </property>
+               <property name="m1OffsetY" stdset="0">
+                <number>6</number>
+               </property>
+               <property name="m2SvgFile" stdset="0">
+                <string>:/themes/flat_light/markers/circleYellow.svg</string>
+               </property>
+               <property name="m2Pos" stdset="0">
+                <enum>Qt::TopLeftCorner</enum>
+               </property>
+               <property name="m2ShowNumber" stdset="0">
+                <bool>true</bool>
+               </property>
+               <property name="m2OffsetX" stdset="0">
+                <number>5</number>
+               </property>
+               <property name="m2OffsetY" stdset="0">
+                <number>6</number>
+               </property>
+               <property name="svgFile">
+                <string>:/themes/flat_light/buttons/buttonMenu.svg</string>
+               </property>
+               <property name="margin">
+                <number>14</number>
+               </property>
+               <property name="spacing">
+                <number>4</number>
+               </property>
+               <property name="iconDiameter">
+                <number>0</number>
+               </property>
+               <property name="icon">
+                <string/>
+               </property>
+               <property name="iconChecked">
+                <string/>
+               </property>
+               <property name="text">
+                <string notr="true">Moisture</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="CDPBaseButtonMenu" name="configMenu">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>false</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+               <property name="textColor">
+                <color>
+                 <red>74</red>
+                 <green>74</green>
+                 <blue>74</blue>
+                </color>
+               </property>
+               <property name="valueToEmit">
+                <number>3</number>
+               </property>
+               <property name="cdpProperty" stdset="0">
+                <string/>
+               </property>
+               <property name="markerFont">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>13</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="markerSize">
+                <number>25</number>
+               </property>
+               <property name="m1SvgFile" stdset="0">
+                <string>:/themes/flat_light/markers/circleRed.svg</string>
+               </property>
+               <property name="m1Pos" stdset="0">
+                <enum>Qt::TopRightCorner</enum>
+               </property>
+               <property name="m1ShowNumber" stdset="0">
+                <bool>true</bool>
+               </property>
+               <property name="m1OffsetX" stdset="0">
+                <number>5</number>
+               </property>
+               <property name="m1OffsetY" stdset="0">
+                <number>6</number>
+               </property>
+               <property name="m2SvgFile" stdset="0">
+                <string>:/themes/flat_light/markers/circleYellow.svg</string>
+               </property>
+               <property name="m2Pos" stdset="0">
+                <enum>Qt::TopLeftCorner</enum>
+               </property>
+               <property name="m2ShowNumber" stdset="0">
+                <bool>true</bool>
+               </property>
+               <property name="m2OffsetX" stdset="0">
+                <number>5</number>
+               </property>
+               <property name="m2OffsetY" stdset="0">
+                <number>6</number>
+               </property>
+               <property name="svgFile">
+                <string>:/themes/flat_light/buttons/buttonMenu.svg</string>
+               </property>
+               <property name="margin">
+                <number>14</number>
+               </property>
+               <property name="spacing">
+                <number>4</number>
+               </property>
+               <property name="iconDiameter">
+                <number>0</number>
+               </property>
+               <property name="icon">
+                <string/>
+               </property>
+               <property name="iconChecked">
+                <string/>
+               </property>
+               <property name="text">
+                <string notr="true">Configuration</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_10" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_23">
+             <property name="spacing">
+              <number>12</number>
+             </property>
+             <property name="leftMargin">
+              <number>9</number>
+             </property>
+             <property name="rightMargin">
+              <number>9</number>
+             </property>
+             <item>
+              <widget class="CDPBaseLabel" name="cdpBaseLabel_11">
+               <property name="font">
+                <font>
+                 <family>arial</family>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Night
+Mode</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="CDPBaseToggleButton" name="switchDayOrNight">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>65</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>65</width>
+                 <height>32</height>
+                </size>
+               </property>
+               <property name="widgetStyle" stdset="0">
+                <number>0</number>
+               </property>
+               <property name="allowBorderPix">
+                <bool>false</bool>
+               </property>
+               <property name="svgFile">
+                <string>:/themes/flat_light/buttons/toggleButtonDefault.svg</string>
+               </property>
+               <property name="textLeft" stdset="0">
+                <string>On</string>
+               </property>
+               <property name="textRight" stdset="0">
+                <string>Off</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="CDPBaseLine" name="cdpBaseLine_8">
+         <property name="svgFile">
+          <string>:/themes/flat_light/backgrounds/bgBorder.svg</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="CDPBaseStackedWidget" name="cdpBaseStackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="MainView">
+       <layout class="QVBoxLayout" name="verticalLayout_19">
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QWidget" name="widget_8" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_17">
+           <property name="topMargin">
+            <number>4</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="CDPBaseLine" name="cdpBaseLine_22">
+             <property name="svgFile">
+              <string>:/themes/flat_light/backgrounds/bgBorder.svg</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_15" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="CDPComWidget" name="cdpComWidgetTempCenter">
+                <property name="maximumSize">
+                 <size>
+                  <width>10</width>
+                  <height>10</height>
+                 </size>
+                </property>
+                <property name="cdpRouting">
+                 <string>GreenhouseApp.GreenhouseController.AllowedInsideTempRangeCenter.Value</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPComWidget" name="cdpComWidgetTempRange">
+                <property name="maximumSize">
+                 <size>
+                  <width>10</width>
+                  <height>10</height>
+                 </size>
+                </property>
+                <property name="cdpRouting">
+                 <string>GreenhouseApp.GreenhouseController.AllowedInsideTempRange.Value</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPBaseLabel" name="cdpBaseLabel_14">
+                <property name="text">
+                 <string>Main</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPComWidget" name="cdpComWidgetMoistureCenter">
+                <property name="maximumSize">
+                 <size>
+                  <width>10</width>
+                  <height>10</height>
+                 </size>
+                </property>
+                <property name="cdpRouting">
+                 <string>GreenhouseApp.GreenhouseController.AllowedMoistureRangeCenter.Value</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPComWidget" name="cdpComWidgetMoistureRange">
+                <property name="maximumSize">
+                 <size>
+                  <width>10</width>
+                  <height>10</height>
+                 </size>
+                </property>
+                <property name="cdpRouting">
+                 <string>GreenhouseApp.GreenhouseController.AllowedMoistureRange.Value</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="CDPBaseLine" name="cdpBaseLine_23">
+             <property name="svgFile">
+              <string>:/themes/flat_light/backgrounds/bgBorder.svg</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_9" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_18">
+              <property name="spacing">
+               <number>16</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <item>
+                 <widget class="CDPBaseMeter" name="insideTempMeter">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="meterType">
+                   <enum>CDPBaseMeter::Custom</enum>
+                  </property>
+                  <property name="minValue">
+                   <double>-30.000000000000000</double>
+                  </property>
+                  <property name="maxValue">
+                   <double>50.000000000000000</double>
+                  </property>
+                  <property name="value">
+                   <double>0.000000000000000</double>
+                  </property>
+                  <property name="textPrefix">
+                   <string>°C</string>
+                  </property>
+                  <property name="textSuffix">
+                   <string>INSIDE</string>
+                  </property>
+                  <property name="numPrecision" stdset="0">
+                   <number>0</number>
+                  </property>
+                  <property name="numOffset">
+                   <number>36</number>
+                  </property>
+                  <property name="ticksMajor" stdset="0">
+                   <number>9</number>
+                  </property>
+                  <property name="alarmShow" stdset="0">
+                   <bool>true</bool>
+                  </property>
+                  <property name="NormalColor">
+                   <color alpha="125">
+                    <red>24</red>
+                    <green>156</green>
+                    <blue>0</blue>
+                   </color>
+                  </property>
+                  <property name="valueMaxNormal">
+                   <double>0.000000000000000</double>
+                  </property>
+                  <property name="valueMaxWarning">
+                   <double>0.000000000000000</double>
+                  </property>
+                  <property name="valueMaxWarningHigh">
+                   <double>0.000000000000000</double>
+                  </property>
+                  <property name="valueMaxError">
+                   <double>0.000000000000000</double>
+                  </property>
+                  <property name="cdpRouting" stdset="0">
+                   <string>GreenhouseApp.GreenhouseController.CurrInsideTemp.Value</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="CDPBaseMeter" name="outsideTempMeter">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="meterType">
+                   <enum>CDPBaseMeter::Custom</enum>
+                  </property>
+                  <property name="minValue">
+                   <double>-30.000000000000000</double>
+                  </property>
+                  <property name="maxValue">
+                   <double>50.000000000000000</double>
+                  </property>
+                  <property name="value">
+                   <double>0.000000000000000</double>
+                  </property>
+                  <property name="textPrefix">
+                   <string>°C</string>
+                  </property>
+                  <property name="textSuffix">
+                   <string>OUTSIDE</string>
+                  </property>
+                  <property name="numPrecision" stdset="0">
+                   <number>0</number>
+                  </property>
+                  <property name="numOffset">
+                   <number>36</number>
+                  </property>
+                  <property name="ticksShow" stdset="0">
+                   <bool>false</bool>
+                  </property>
+                  <property name="ticksMajor" stdset="0">
+                   <number>9</number>
+                  </property>
+                  <property name="alarmShow" stdset="0">
+                   <bool>true</bool>
+                  </property>
+                  <property name="valueMinNormal">
+                   <double>0.000000000000000</double>
+                  </property>
+                  <property name="valueMaxNormal">
+                   <double>0.000000000000000</double>
+                  </property>
+                  <property name="valueMaxWarning">
+                   <double>0.000000000000000</double>
+                  </property>
+                  <property name="valueMaxWarningHigh">
+                   <double>0.000000000000000</double>
+                  </property>
+                  <property name="valueMaxError">
+                   <double>0.000000000000000</double>
+                  </property>
+                  <property name="cdpRouting" stdset="0">
+                   <string>GreenhouseApp.GreenhouseController.CurrOutsideTemp.Value</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_11">
+                <item>
+                 <widget class="CDPBaseMeter" name="moistureMeter">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="meterType">
+                   <enum>CDPBaseMeter::Custom</enum>
+                  </property>
+                  <property name="minValue">
+                   <double>0.000000000000000</double>
+                  </property>
+                  <property name="maxValue">
+                   <double>100.000000000000000</double>
+                  </property>
+                  <property name="value">
+                   <double>0.000000000000000</double>
+                  </property>
+                  <property name="textPrefix">
+                   <string>%</string>
+                  </property>
+                  <property name="textSuffix">
+                   <string>MOISTURE</string>
+                  </property>
+                  <property name="numPrecision" stdset="0">
+                   <number>0</number>
+                  </property>
+                  <property name="numOffset">
+                   <number>36</number>
+                  </property>
+                  <property name="alarmShow" stdset="0">
+                   <bool>true</bool>
+                  </property>
+                  <property name="NormalColor">
+                   <color alpha="125">
+                    <red>24</red>
+                    <green>156</green>
+                    <blue>0</blue>
+                   </color>
+                  </property>
+                  <property name="valueMaxNormal">
+                   <double>0.000000000000000</double>
+                  </property>
+                  <property name="valueMaxWarning">
+                   <double>0.000000000000000</double>
+                  </property>
+                  <property name="valueMaxWarningHigh">
+                   <double>0.000000000000000</double>
+                  </property>
+                  <property name="valueMaxError">
+                   <double>0.000000000000000</double>
+                  </property>
+                  <property name="cdpRouting" stdset="0">
+                   <string>GreenhouseApp.GreenhouseController.CurrSoilMoisture.Value</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="widget_11" native="true">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_20">
+                   <property name="spacing">
+                    <number>12</number>
+                   </property>
+                   <item>
+                    <widget class="QWidget" name="widget_16" native="true">
+                     <layout class="QVBoxLayout" name="verticalLayout_4">
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="CDPBaseLamp" name="cdpBaseLamp">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="cdpStyleRouting" stdset="0">
+                         <string>GreenhouseApp.GreenhouseController.Ventilating.Value</string>
+                        </property>
+                        <property name="widgetPicture" stdset="0">
+                         <number>0</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="CDPBaseLabel" name="cdpBaseLabel_27">
+                        <property name="font">
+                         <font>
+                          <family>arial</family>
+                          <pointsize>9</pointsize>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>VENTILATING</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="fontColor">
+                         <color alpha="100">
+                          <red>136</red>
+                          <green>136</green>
+                          <blue>136</blue>
+                         </color>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QWidget" name="widget_20" native="true">
+                     <layout class="QVBoxLayout" name="verticalLayout_5">
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="CDPBaseLamp" name="cdpBaseLamp_3">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="widgetStyle" stdset="0">
+                         <number>0</number>
+                        </property>
+                        <property name="cdpStyleRouting" stdset="0">
+                         <string>GreenhouseApp.GreenhouseController.MaxIrrigationAllowed.Value</string>
+                        </property>
+                        <property name="widgetPicture" stdset="0">
+                         <number>0</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="CDPBaseLabel" name="cdpBaseLabel_28">
+                        <property name="font">
+                         <font>
+                          <family>arial</family>
+                          <pointsize>9</pointsize>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>IRRIGATING</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="fontColor">
+                         <color alpha="100">
+                          <red>136</red>
+                          <green>136</green>
+                          <blue>136</blue>
+                         </color>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="CDPBaseContainer" name="cdpBaseContainer_4">
+          <property name="borderMarginLeft">
+           <number>6</number>
+          </property>
+          <property name="borderMarginTop">
+           <number>6</number>
+          </property>
+          <property name="borderMarginRight">
+           <number>6</number>
+          </property>
+          <property name="borderMarginBottom">
+           <number>6</number>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="CDPBaseContainer" name="cdpBaseContainer_3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="borderMarginLeft">
+           <number>6</number>
+          </property>
+          <property name="borderMarginTop">
+           <number>6</number>
+          </property>
+          <property name="borderMarginRight">
+           <number>6</number>
+          </property>
+          <property name="borderMarginBottom">
+           <number>6</number>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="TempGraph">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <item>
+         <widget class="QWidget" name="widget_5" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_9">
+           <property name="topMargin">
+            <number>4</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="CDPBaseLine" name="cdpBaseLine_18">
+             <property name="svgFile">
+              <string>:/themes/flat_light/backgrounds/bgBorder.svg</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="CDPBaseLabel" name="cdpBaseLabel_12">
+             <property name="text">
+              <string>Temperature</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="CDPBaseLine" name="cdpBaseLine_19">
+             <property name="svgFile">
+              <string>:/themes/flat_light/backgrounds/bgBorder.svg</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_3" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_10">
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="CDP::GraphWidgets::DatabaseGraphWidget" name="tempDatabaseGraph">
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="databaseUrl">
+                 <url>
+                  <string>ip://127.0.0.1:17000</string>
+                 </url>
+                </property>
+                <property name="yAxisColumns">
+                 <stringlist>
+                  <string>CurrOutsideTemp</string>
+                  <string>CurrInsideTemp</string>
+                 </stringlist>
+                </property>
+                <property name="graphPlottingMode">
+                 <enum>CDP::GraphWidgets::GraphPlotting::Scrolling</enum>
+                </property>
+                <property name="cssFile">
+                 <string>:/themes/flat_light/graphs/graph.css</string>
+                </property>
+                <property name="yAxisMinValue">
+                 <double>-30.000000000000000</double>
+                </property>
+                <property name="yAxisMaxValue">
+                 <double>50.000000000000000</double>
+                </property>
+                <property name="currentTimeOffsetMs">
+                 <number>-1900</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPBaseContainer" name="cdpBaseContainer">
+                <property name="borderMarginLeft">
+                 <number>6</number>
+                </property>
+                <property name="borderMarginTop">
+                 <number>6</number>
+                </property>
+                <property name="borderMarginRight">
+                 <number>6</number>
+                </property>
+                <property name="borderMarginBottom">
+                 <number>6</number>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="CDPBaseButton" name="cdpBaseButton">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>28</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Reconnect</string>
+                   </property>
+                   <property name="svgFile">
+                    <string>:/themes/flat_light/buttons/buttonPlain.svg</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="CDPBaseButton" name="pauseTemp">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>28</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Pause</string>
+                   </property>
+                   <property name="svgFile">
+                    <string>:/themes/flat_light/buttons/buttonPlain.svg</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="CDPBaseButton" name="resumeTemp">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>28</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Resume</string>
+                   </property>
+                   <property name="svgFile">
+                    <string>:/themes/flat_light/buttons/buttonPlain.svg</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="CDPBaseButton" name="autoscaleTemp">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>28</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Autoscale</string>
+                   </property>
+                   <property name="svgFile">
+                    <string>:/themes/flat_light/buttons/buttonPlain.svg</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="SoilMoisture">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <item>
+         <widget class="QWidget" name="widget_6" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_11">
+           <property name="topMargin">
+            <number>4</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="CDPBaseLine" name="cdpBaseLine_20">
+             <property name="svgFile">
+              <string>:/themes/flat_light/backgrounds/bgBorder.svg</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="CDPBaseLabel" name="cdpBaseLabel_13">
+             <property name="text">
+              <string>Moisture</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="CDPBaseLine" name="cdpBaseLine_21">
+             <property name="svgFile">
+              <string>:/themes/flat_light/backgrounds/bgBorder.svg</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_7" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_16">
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="CDP::GraphWidgets::DatabaseGraphWidget" name="moistureDatabaseGraph">
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="transformationAnchor">
+                 <enum>QGraphicsView::AnchorViewCenter</enum>
+                </property>
+                <property name="viewportUpdateMode">
+                 <enum>QGraphicsView::FullViewportUpdate</enum>
+                </property>
+                <property name="databaseUrl">
+                 <url>
+                  <string>ip://127.0.0.1:17000</string>
+                 </url>
+                </property>
+                <property name="yAxisColumns">
+                 <stringlist>
+                  <string>CurrSoilMoisture</string>
+                 </stringlist>
+                </property>
+                <property name="graphPlottingMode">
+                 <enum>CDP::GraphWidgets::GraphPlotting::Scrolling</enum>
+                </property>
+                <property name="cssFile">
+                 <string>:/themes/flat_light/graphs/graph.css</string>
+                </property>
+                <property name="yAxisMinValue">
+                 <double>1.000000000000000</double>
+                </property>
+                <property name="yAxisMaxValue">
+                 <double>100.000000000000000</double>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPBaseContainer" name="cdpBaseContainer_2">
+                <property name="borderMarginLeft">
+                 <number>6</number>
+                </property>
+                <property name="borderMarginTop">
+                 <number>6</number>
+                </property>
+                <property name="borderMarginRight">
+                 <number>6</number>
+                </property>
+                <property name="borderMarginBottom">
+                 <number>6</number>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="CDPBaseButton" name="reconnectMoisture">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>28</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Reconnect</string>
+                   </property>
+                   <property name="svgFile">
+                    <string>:/themes/flat_light/buttons/buttonPlain.svg</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="CDPBaseButton" name="pauseMoisture">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>28</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Pause</string>
+                   </property>
+                   <property name="svgFile">
+                    <string>:/themes/flat_light/buttons/buttonPlain.svg</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="CDPBaseButton" name="resumeMoisture">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>28</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Resume</string>
+                   </property>
+                   <property name="svgFile">
+                    <string>:/themes/flat_light/buttons/buttonPlain.svg</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="CDPBaseButton" name="autoscaleMoisture">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>28</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Autoscale</string>
+                   </property>
+                   <property name="svgFile">
+                    <string>:/themes/flat_light/buttons/buttonPlain.svg</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Configure">
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <property name="spacing">
+         <number>18</number>
+        </property>
+        <property name="leftMargin">
+         <number>18</number>
+        </property>
+        <property name="topMargin">
+         <number>4</number>
+        </property>
+        <property name="rightMargin">
+         <number>18</number>
+        </property>
+        <item>
+         <widget class="QWidget" name="widget_12" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_21">
+           <property name="spacing">
+            <number>12</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="widget_17" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_22">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="CDPBaseLine" name="cdpBaseLine_24">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>1</height>
+                 </size>
+                </property>
+                <property name="svgFile">
+                 <string>:/themes/flat_light/backgrounds/bgBorder.svg</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPBaseLabel" name="cdpBaseLabel_10">
+                <property name="text">
+                 <string>Inside Temperature</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPBaseLine" name="cdpBaseLine_25">
+                <property name="svgFile">
+                 <string>:/themes/flat_light/backgrounds/bgBorder.svg</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_48" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_38">
+              <property name="spacing">
+               <number>8</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="CDPBaseLabel" name="cdpBaseLabel_47">
+                <property name="font">
+                 <font>
+                  <family>arial</family>
+                  <pointsize>9</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Min (°C)</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPBaseSlider" name="cdpBaseSlider_4">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="numPostfix">
+                 <string> kg</string>
+                </property>
+                <property name="numPrecision" stdset="0">
+                 <number>1</number>
+                </property>
+                <property name="minValue">
+                 <double>-30.000000000000000</double>
+                </property>
+                <property name="maxValue">
+                 <double>50.000000000000000</double>
+                </property>
+                <property name="svgFile">
+                 <string>:/themes/flat_light/sliders/sliderTriangleKnob.svg</string>
+                </property>
+                <property name="type">
+                 <enum>CDPBaseSlider::TriangleKnob</enum>
+                </property>
+                <property name="knobText" stdset="0">
+                 <bool>true</bool>
+                </property>
+                <property name="knobTextColor">
+                 <color>
+                  <red>149</red>
+                  <green>149</green>
+                  <blue>149</blue>
+                 </color>
+                </property>
+                <property name="knobTextRect">
+                 <rect>
+                  <x>9</x>
+                  <y>15</y>
+                  <width>35</width>
+                  <height>18</height>
+                 </rect>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="endMargins">
+                 <number>8</number>
+                </property>
+                <property name="tickRailEndAlignment">
+                 <bool>true</bool>
+                </property>
+                <property name="cdpRouting" stdset="0">
+                 <string>GreenhouseApp.GreenhouseController.MinAllowedInsideTemp</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_47" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_33">
+              <property name="spacing">
+               <number>8</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="CDPBaseLabel" name="cdpBaseLabel_46">
+                <property name="font">
+                 <font>
+                  <family>arial</family>
+                  <pointsize>9</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Max (°C)</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPBaseSlider" name="cdpBaseSlider_3">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="numPrecision" stdset="0">
+                 <number>1</number>
+                </property>
+                <property name="minValue">
+                 <double>-30.000000000000000</double>
+                </property>
+                <property name="maxValue">
+                 <double>50.000000000000000</double>
+                </property>
+                <property name="svgFile">
+                 <string>:/themes/flat_light/sliders/sliderTriangleKnob.svg</string>
+                </property>
+                <property name="type">
+                 <enum>CDPBaseSlider::TriangleKnob</enum>
+                </property>
+                <property name="knobText" stdset="0">
+                 <bool>true</bool>
+                </property>
+                <property name="knobTextColor">
+                 <color>
+                  <red>149</red>
+                  <green>149</green>
+                  <blue>149</blue>
+                 </color>
+                </property>
+                <property name="knobTextRect">
+                 <rect>
+                  <x>9</x>
+                  <y>15</y>
+                  <width>35</width>
+                  <height>18</height>
+                 </rect>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="endMargins">
+                 <number>8</number>
+                </property>
+                <property name="tickRailEndAlignment">
+                 <bool>true</bool>
+                </property>
+                <property name="cdpRouting" stdset="0">
+                 <string>GreenhouseApp.GreenhouseController.MaxAllowedInsideTemp</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_13" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_23">
+           <property name="spacing">
+            <number>12</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="widget_18" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_24">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="CDPBaseLine" name="cdpBaseLine_26">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>1</height>
+                 </size>
+                </property>
+                <property name="svgFile">
+                 <string>:/themes/flat_light/backgrounds/bgBorder.svg</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPBaseLabel" name="cdpBaseLabel_15">
+                <property name="text">
+                 <string>Moisture</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPBaseLine" name="cdpBaseLine_27">
+                <property name="svgFile">
+                 <string>:/themes/flat_light/backgrounds/bgBorder.svg</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_49" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_39">
+              <property name="spacing">
+               <number>8</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="CDPBaseLabel" name="cdpBaseLabel_48">
+                <property name="font">
+                 <font>
+                  <family>arial</family>
+                  <pointsize>9</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Min (%)</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPBaseSlider" name="cdpBaseSlider_5">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="numPostfix">
+                 <string> %</string>
+                </property>
+                <property name="numPrecision" stdset="0">
+                 <number>1</number>
+                </property>
+                <property name="minValue">
+                 <double>0.000000000000000</double>
+                </property>
+                <property name="maxValue">
+                 <double>100.000000000000000</double>
+                </property>
+                <property name="svgFile">
+                 <string>:/themes/flat_light/sliders/sliderTriangleKnob.svg</string>
+                </property>
+                <property name="type">
+                 <enum>CDPBaseSlider::TriangleKnob</enum>
+                </property>
+                <property name="knobText" stdset="0">
+                 <bool>true</bool>
+                </property>
+                <property name="knobTextColor">
+                 <color>
+                  <red>149</red>
+                  <green>149</green>
+                  <blue>149</blue>
+                 </color>
+                </property>
+                <property name="knobTextRect">
+                 <rect>
+                  <x>9</x>
+                  <y>15</y>
+                  <width>35</width>
+                  <height>18</height>
+                 </rect>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="endMargins">
+                 <number>8</number>
+                </property>
+                <property name="tickRailEndAlignment">
+                 <bool>true</bool>
+                </property>
+                <property name="cdpRouting" stdset="0">
+                 <string>GreenhouseApp.GreenhouseController.MinAllowedSoilMoisture</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_58" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_35">
+              <property name="spacing">
+               <number>8</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="CDPBaseLabel" name="cdpBaseLabel_49">
+                <property name="font">
+                 <font>
+                  <family>arial</family>
+                  <pointsize>9</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Max (%)</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPBaseSlider" name="cdpBaseSlider_6">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="numPostfix">
+                 <string> %</string>
+                </property>
+                <property name="numPrecision" stdset="0">
+                 <number>1</number>
+                </property>
+                <property name="minValue">
+                 <double>0.000000000000000</double>
+                </property>
+                <property name="maxValue">
+                 <double>100.000000000000000</double>
+                </property>
+                <property name="svgFile">
+                 <string>:/themes/flat_light/sliders/sliderTriangleKnob.svg</string>
+                </property>
+                <property name="type">
+                 <enum>CDPBaseSlider::TriangleKnob</enum>
+                </property>
+                <property name="knobText" stdset="0">
+                 <bool>true</bool>
+                </property>
+                <property name="knobTextColor">
+                 <color>
+                  <red>149</red>
+                  <green>149</green>
+                  <blue>149</blue>
+                 </color>
+                </property>
+                <property name="knobTextRect">
+                 <rect>
+                  <x>20</x>
+                  <y>15</y>
+                  <width>54</width>
+                  <height>18</height>
+                 </rect>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="endMargins">
+                 <number>8</number>
+                </property>
+                <property name="tickRailEndAlignment">
+                 <bool>true</bool>
+                </property>
+                <property name="cdpRouting" stdset="0">
+                 <string>GreenhouseApp.GreenhouseController.MaxAllowedSoilMoisture</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_14" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_25">
+           <property name="spacing">
+            <number>12</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="widget_19" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_27">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="CDPBaseLine" name="cdpBaseLine_28">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>1</height>
+                 </size>
+                </property>
+                <property name="svgFile">
+                 <string>:/themes/flat_light/backgrounds/bgBorder.svg</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPBaseLabel" name="cdpBaseLabel_16">
+                <property name="text">
+                 <string>Irrigation</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPBaseLine" name="cdpBaseLine_29">
+                <property name="svgFile">
+                 <string>:/themes/flat_light/backgrounds/bgBorder.svg</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_59" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_40">
+              <property name="spacing">
+               <number>8</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="CDPBaseLabel" name="cdpBaseLabel_50">
+                <property name="font">
+                 <font>
+                  <family>arial</family>
+                  <pointsize>9</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Start Time (h)</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPBaseSlider" name="cdpBaseSlider_7">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="numPostfix">
+                 <string> kg</string>
+                </property>
+                <property name="numPrecision" stdset="0">
+                 <number>0</number>
+                </property>
+                <property name="minValue">
+                 <double>0.000000000000000</double>
+                </property>
+                <property name="maxValue">
+                 <double>23.000000000000000</double>
+                </property>
+                <property name="svgFile">
+                 <string>:/themes/flat_light/sliders/sliderTriangleKnob.svg</string>
+                </property>
+                <property name="type">
+                 <enum>CDPBaseSlider::TriangleKnob</enum>
+                </property>
+                <property name="knobText" stdset="0">
+                 <bool>true</bool>
+                </property>
+                <property name="knobTextColor">
+                 <color>
+                  <red>149</red>
+                  <green>149</green>
+                  <blue>149</blue>
+                 </color>
+                </property>
+                <property name="knobTextRect">
+                 <rect>
+                  <x>4</x>
+                  <y>15</y>
+                  <width>26</width>
+                  <height>18</height>
+                 </rect>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="endMargins">
+                 <number>8</number>
+                </property>
+                <property name="tickRailEndAlignment">
+                 <bool>true</bool>
+                </property>
+                <property name="cdpRouting" stdset="0">
+                 <string>GreenhouseApp.GreenhouseController.IrrigationStartHour</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_60" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_36">
+              <property name="spacing">
+               <number>8</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="CDPBaseLabel" name="cdpBaseLabel_51">
+                <property name="font">
+                 <font>
+                  <family>arial</family>
+                  <pointsize>9</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>End Time (h)</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPBaseSlider" name="cdpBaseSlider_8">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="numPrecision" stdset="0">
+                 <number>0</number>
+                </property>
+                <property name="minValue">
+                 <double>0.000000000000000</double>
+                </property>
+                <property name="maxValue">
+                 <double>23.000000000000000</double>
+                </property>
+                <property name="svgFile">
+                 <string>:/themes/flat_light/sliders/sliderTriangleKnob.svg</string>
+                </property>
+                <property name="type">
+                 <enum>CDPBaseSlider::TriangleKnob</enum>
+                </property>
+                <property name="knobText" stdset="0">
+                 <bool>true</bool>
+                </property>
+                <property name="knobTextColor">
+                 <color>
+                  <red>149</red>
+                  <green>149</green>
+                  <blue>149</blue>
+                 </color>
+                </property>
+                <property name="knobTextRect">
+                 <rect>
+                  <x>4</x>
+                  <y>15</y>
+                  <width>26</width>
+                  <height>18</height>
+                 </rect>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="endMargins">
+                 <number>8</number>
+                </property>
+                <property name="tickRailEndAlignment">
+                 <bool>true</bool>
+                </property>
+                <property name="cdpRouting" stdset="0">
+                 <string>GreenhouseApp.GreenhouseController.IrrigationEndHour</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_61" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_37">
+              <property name="spacing">
+               <number>8</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="CDPBaseLabel" name="cdpBaseLabel_52">
+                <property name="font">
+                 <font>
+                  <family>arial</family>
+                  <pointsize>9</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Cycle Duration (s)</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPBaseSlider" name="cdpBaseSlider_9">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="numPos">
+                 <enum>CDPBaseTickMarks::NoNumbers</enum>
+                </property>
+                <property name="numPostfix">
+                 <string>s</string>
+                </property>
+                <property name="numPrecision" stdset="0">
+                 <number>0</number>
+                </property>
+                <property name="minValue">
+                 <double>0.000000000000000</double>
+                </property>
+                <property name="maxValue">
+                 <double>100.000000000000000</double>
+                </property>
+                <property name="svgFile">
+                 <string>:/themes/flat_light/sliders/sliderTriangleKnob.svg</string>
+                </property>
+                <property name="type">
+                 <enum>CDPBaseSlider::TriangleKnob</enum>
+                </property>
+                <property name="knobPos" stdset="0">
+                 <enum>CDPBaseSlider::KnobPosCenter</enum>
+                </property>
+                <property name="knobText" stdset="0">
+                 <bool>true</bool>
+                </property>
+                <property name="knobTextColor">
+                 <color>
+                  <red>149</red>
+                  <green>149</green>
+                  <blue>149</blue>
+                 </color>
+                </property>
+                <property name="knobTextRect">
+                 <rect>
+                  <x>4</x>
+                  <y>15</y>
+                  <width>26</width>
+                  <height>18</height>
+                 </rect>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="endMargins">
+                 <number>8</number>
+                </property>
+                <property name="tickRailEndAlignment">
+                 <bool>true</bool>
+                </property>
+                <property name="cdpRouting" stdset="0">
+                 <string>GreenhouseApp.GreenhouseController.CycleDuration</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_62" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_42">
+              <property name="spacing">
+               <number>8</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="CDPBaseLabel" name="cdpBaseLabel_55">
+                <property name="font">
+                 <font>
+                  <family>arial</family>
+                  <pointsize>9</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Water Absorption (s)</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CDPBaseSlider" name="cdpBaseSlider_11">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="numPrecision" stdset="0">
+                 <number>0</number>
+                </property>
+                <property name="minValue">
+                 <double>0.000000000000000</double>
+                </property>
+                <property name="maxValue">
+                 <double>160.000000000000000</double>
+                </property>
+                <property name="svgFile">
+                 <string>:/themes/flat_light/sliders/sliderTriangleKnob.svg</string>
+                </property>
+                <property name="type">
+                 <enum>CDPBaseSlider::TriangleKnob</enum>
+                </property>
+                <property name="knobText" stdset="0">
+                 <bool>true</bool>
+                </property>
+                <property name="knobTextColor">
+                 <color>
+                  <red>149</red>
+                  <green>149</green>
+                  <blue>149</blue>
+                 </color>
+                </property>
+                <property name="knobTextRect">
+                 <rect>
+                  <x>4</x>
+                  <y>15</y>
+                  <width>26</width>
+                  <height>18</height>
+                 </rect>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="endMargins">
+                 <number>8</number>
+                </property>
+                <property name="tickRailEndAlignment">
+                 <bool>true</bool>
+                </property>
+                <property name="cdpRouting" stdset="0">
+                 <string>GreenhouseApp.GreenhouseController.WaterAbsorptionTime</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CDPBaseSlider</class>
+   <extends>QWidget</extends>
+   <header>CDPBaseWidgets/CDPBaseSlider.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPComWidget</class>
+   <extends>QWidget</extends>
+   <header>CDPBaseWidgets/CDPComWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseContainer</class>
+   <extends>QWidget</extends>
+   <header>CDPBaseWidgets/CDPBaseContainer.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseStackedWidget</class>
+   <extends>QStackedWidget</extends>
+   <header>CDPBaseWidgets/CDPBaseStackedWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseButton</class>
+   <extends>QPushButton</extends>
+   <header>CDPBaseWidgets/CDPBaseButton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseButtonPopDlg</class>
+   <extends>CDPBaseButtonMsg</extends>
+   <header>CDPBaseWidgets/CDPBaseButtonPopDlg.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseButtonMsg</class>
+   <extends>CDPBaseButton</extends>
+   <header>CDPBaseWidgets/CDPBaseButtonMsg.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseButtonMenu</class>
+   <extends>CDPBaseButtonPopDlg</extends>
+   <header>CDPBaseWidgets/CDPBaseButtonMenu.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseToggleButton</class>
+   <extends>QWidget</extends>
+   <header>CDPBaseWidgets/CDPBaseToggleButton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseLabel</class>
+   <extends>QLabel</extends>
+   <header>CDPBaseWidgets/CDPBaseLabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseMeter</class>
+   <extends>QWidget</extends>
+   <header>CDPBaseWidgets/CDPBaseMeter.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBasePicture</class>
+   <extends>QWidget</extends>
+   <header>CDPBaseWidgets/CDPBasePicture.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBasePictureSequence</class>
+   <extends>CDPBasePicture</extends>
+   <header>CDPBaseWidgets/CDPBasePictureSequence.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseLamp</class>
+   <extends>CDPBasePictureSequence</extends>
+   <header>CDPBaseWidgets/CDPBaseLamp.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseLine</class>
+   <extends>CDPBasePicture</extends>
+   <header>CDPBaseWidgets/CDPBaseLine.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseMainWindow</class>
+   <extends>QMainWindow</extends>
+   <header>CDPBaseWidgets/CDPBaseMainWindow.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CDP::GraphWidgets::DatabaseGraphWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>cdp/graphwidgets/databasegraphwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>mainMenu</sender>
+   <signal>checked(int)</signal>
+   <receiver>cdpBaseStackedWidget</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>94</x>
+     <y>161</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>221</x>
+     <y>15</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tempMenu</sender>
+   <signal>checked(int)</signal>
+   <receiver>cdpBaseStackedWidget</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>87</x>
+     <y>220</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>353</x>
+     <y>98</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>moistureMenu</sender>
+   <signal>checked(int)</signal>
+   <receiver>cdpBaseStackedWidget</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>92</x>
+     <y>269</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>358</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>configMenu</sender>
+   <signal>checked(int)</signal>
+   <receiver>cdpBaseStackedWidget</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>94</x>
+     <y>318</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>355</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>switchDayOrNight</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>mainWindow</receiver>
+   <slot>setNightTheme(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>129</x>
+     <y>470</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>266</x>
+     <y>482</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resumeMoisture</sender>
+   <signal>clicked()</signal>
+   <receiver>moistureDatabaseGraph</receiver>
+   <slot>resume()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>245</x>
+     <y>41</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>autoscaleMoisture</sender>
+   <signal>clicked()</signal>
+   <receiver>moistureDatabaseGraph</receiver>
+   <slot>autoScale()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>245</x>
+     <y>41</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resumeTemp</sender>
+   <signal>clicked()</signal>
+   <receiver>tempDatabaseGraph</receiver>
+   <slot>resume()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>245</x>
+     <y>41</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>autoscaleTemp</sender>
+   <signal>clicked()</signal>
+   <receiver>tempDatabaseGraph</receiver>
+   <slot>autoScale()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>245</x>
+     <y>41</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cdpBaseButton</sender>
+   <signal>clicked()</signal>
+   <receiver>tempDatabaseGraph</receiver>
+   <slot>reconnectToDatabase()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>245</x>
+     <y>41</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>reconnectMoisture</sender>
+   <signal>clicked()</signal>
+   <receiver>moistureDatabaseGraph</receiver>
+   <slot>reconnectToDatabase()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>245</x>
+     <y>41</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cdpComWidgetMoistureCenter</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>moistureMeter</receiver>
+   <slot>setAlarmSectorCenter(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>765</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>271</x>
+     <y>330</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cdpComWidgetMoistureRange</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>moistureMeter</receiver>
+   <slot>setAlarmSectorNormal(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>781</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>271</x>
+     <y>330</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cdpComWidgetTempCenter</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>insideTempMeter</receiver>
+   <slot>setAlarmSectorCenter(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>173</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>271</x>
+     <y>86</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cdpComWidgetTempRange</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>insideTempMeter</receiver>
+   <slot>setAlarmSectorNormal(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>189</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>271</x>
+     <y>86</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pauseTemp</sender>
+   <signal>clicked()</signal>
+   <receiver>tempDatabaseGraph</receiver>
+   <slot>pause()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>245</x>
+     <y>41</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pauseMoisture</sender>
+   <signal>clicked()</signal>
+   <receiver>moistureDatabaseGraph</receiver>
+   <slot>pause()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>245</x>
+     <y>41</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

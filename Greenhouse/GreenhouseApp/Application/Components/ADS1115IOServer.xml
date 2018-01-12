@@ -1,0 +1,36 @@
+<Component Model='I2CIO.ADS1115IOServer' Name='ADS1115IOServer' src='Components/ADS1115IOServer.xml'  Description='Communicate with ADS1115 analog-to-digital converter over I2C bus'>
+  <OverrideStateMachine>0</OverrideStateMachine>
+  <Adapter>/dev/i2c-1</Adapter>
+  <EnableA0>1</EnableA0>
+  <EnableA1>1</EnableA1>
+  <EnableA2>1</EnableA2>
+  <EnableA3>1</EnableA3>
+  <EnableA0A1>0</EnableA0A1>
+  <EnableA0A3>0</EnableA0A3>
+  <EnableA1A3>0</EnableA1A3>
+  <EnableA2A3>0</EnableA2A3>
+  <Gain>±2.048V</Gain>
+  <fs>100</fs>
+
+  <Signals>
+    <Signal Description='Process run time each s.' Input='0' Model='CDPSignal&lt;double&gt;' Name='Process Timer' Type='double' Unit='s/s'></Signal>
+    <Signal Description='Process interval [s].' Input='0' Model='CDPSignal&lt;double&gt;' Name='Process Period' Type='double' Unit='s'></Signal>
+    <Signal Description='Voltage difference between A0 and GND' Input='0' Model='CDPSignal&lt;short&gt;' Name='A0' Type='short'>
+      <Operator Description='The ScalingOperator scales from one range and type to another range and type.' Model='Automation.ScalingOperator&lt;double&gt;' Name='ScalingOperator' Type='double'>
+        <ScalingPoint InValue='0' Model='Automation.ScalingPoint&lt;double&gt;' Name='Min' OutValue='0' Type='double'></ScalingPoint>
+        <ScalingPoint InValue='32767' Model='Automation.ScalingPoint&lt;double&gt;' Name='Max' OutValue='100' Type='double'></ScalingPoint></Operator>
+      <Operator Description='Set signal to specified value if prerequisites are met' Model='Automation.InterlockOperator&lt;double&gt;' Name='InputSwitch' Type='double'  CompareValueRightRouted='GreenhouseApp.SimulationEnvironment.Enable'  Comparator='='  CompareValueLeft='1'  SetValueRouting='GreenhouseApp.SimulationEnvironment.CurrSoilMoisture'></Operator></Signal>
+    <Signal Description='Voltage difference between A1 and GND' Input='0' Model='CDPSignal&lt;short&gt;' Name='A1' Type='short'></Signal>
+    <Signal Description='Voltage difference between A2 and GND' Input='0' Model='CDPSignal&lt;short&gt;' Name='A2' Type='short'></Signal>
+    <Signal Description='Voltage difference between A3 and GND' Input='0' Model='CDPSignal&lt;short&gt;' Name='A3' Type='short'></Signal>
+    <Signal Description='Voltage difference between A0 and A1' Input='0' Model='CDPSignal&lt;short&gt;' Name='A0A1' Type='short'></Signal>
+    <Signal Description='Voltage difference between A0 and A3' Input='0' Model='CDPSignal&lt;short&gt;' Name='A0A3' Type='short'></Signal>
+    <Signal Description='Voltage difference between A1 and A3' Input='0' Model='CDPSignal&lt;short&gt;' Name='A1A3' Type='short'></Signal>
+    <Signal Description='Voltage difference between A2 and A3' Input='0' Model='CDPSignal&lt;short&gt;' Name='A2A3' Type='short'></Signal>
+  </Signals>
+
+  <Alarms>
+    <Alarm Description='A component was suspended!' Enabled='1' Level='Warning' Model='CDPAlarm' Name='Component Suspended' Text='Component was suspended!'></Alarm>
+    <Alarm Description='Error with I2C communication' Enabled='1' Level='Error' Name='TransmissionAlarm'></Alarm>
+  </Alarms>
+</Component>

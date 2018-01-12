@@ -1,0 +1,27 @@
+<Component Model='CDPLogger.CDPLogger' Name='CDPLogger' src='Components/CDPLogger.xml'  Description='Component for logging CDP signals to a database.'>
+  <ServerPort>17000</ServerPort>
+  <BufferSpanMinutes>0</BufferSpanMinutes>
+  <PeriodicLogFrequency>100</PeriodicLogFrequency>
+  <InMemoryLogging>0</InMemoryLogging>
+  <SizeAlarmGB>0</SizeAlarmGB>
+  <fs>100</fs>
+
+  <Signals>
+    <Signal Description='Process run time each s.' Input='0' Model='CDPSignal&lt;double&gt;' Name='Process Timer' Type='double' Unit='s/s'></Signal>
+    <Signal Description='Process interval [s].' Input='0' Model='CDPSignal&lt;double&gt;' Name='Process Period' Type='double' Unit='s'></Signal>
+  </Signals>
+
+  <Alarms>
+    <Alarm Description='A component was suspended!' Enabled='1' Level='Warning' Model='CDPAlarm' Name='Component Suspended' Text='Component was suspended!'></Alarm>
+    <Alarm Description='The database has reached the maximum size.' Enabled='1' Level='Warning' Name='SizeAlarm'></Alarm>
+    <Alarm Description='Error when logging to database.' Enabled='1' Level='Warning' Name='LoggerAlarm'></Alarm>
+  </Alarms>
+
+  <LoggedValues>
+    <LoggedValue Description='Description of logged element.' Name='CurrOutsideTemp'  Routing='GreenhouseApp.GreenhouseController.CurrOutsideTemp'></LoggedValue>
+    <LoggedValue Description='Description of logged element.' Name='CurrInsideTemp'  Routing='GreenhouseApp.GreenhouseController.CurrInsideTemp'></LoggedValue>
+    <LoggedValue Description='Description of logged element.' Name='CurrSoilMoisture'  Routing='GreenhouseApp.GreenhouseController.CurrSoilMoisture'></LoggedValue>
+  </LoggedValues>
+  <Datastore DaysOfHistory='0' Description='Datastore that packs data into keyframes for faster access.
+        Optimized for storing values changing with different intervals.' Model='CDPLogger.CDPCompactDatastore' Name='Greenhouse' SizeLimitGB='3'></Datastore>
+</Component>

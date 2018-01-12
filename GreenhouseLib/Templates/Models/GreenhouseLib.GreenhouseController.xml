@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<Model Version="2.0" Name="GreenhouseLib.GreenhouseController">
+ <ModelTypeClass>C++</ModelTypeClass>
+ <BaseModel>CDPComponent</BaseModel>
+ <Priority>normal</Priority>
+ <fs>1000</fs>
+ <Attributes>
+  <Attribute Type="string" Value="Simple component" Name="Description"/>
+  <Attribute Description="Implementation model used." Type="string" ReadOnly="1" SaveOnChange="0" Required="1" Value="GreenhouseLib.GreenhouseController" Name="Model"/>
+ </Attributes>
+ <Signals>
+  <Signal Description="Current value of inside temperature." Unit="" Input="0" Type="double" Model="CDPSignal&lt;double&gt;" Value="" Name="CurrInsideTemp"/>
+  <Signal Description="Current value of outside temperature. " Unit="" Input="0" Type="double" Model="CDPSignal&lt;double&gt;" Value="" Name="CurrOutsideTemp"/>
+  <Signal Description="Current value in percentage of soil moisture." Unit="" Input="0" Type="double" Model="CDPSignal&lt;double&gt;" Value="" Name="CurrSoilMoisture"/>
+  <Signal Description="Time in day." Input="0" Type="double" Model="CDPSignal&lt;double&gt;" Name="CurrTime"/>
+  <Signal Description="Output signal from controller to ventilation fan." Unit="" Input="0" Type="bool" Model="CDPSignal&lt;bool&gt;" Value="" Name="Ventilating"/>
+  <Signal Description="Current state of irrigation. If 1, then irrigation is on, else irritation is off." Unit="" Input="0" Type="bool" Model="CDPSignal&lt;bool&gt;" Value="" Name="Irrigating"/>
+  <Signal Description="The range beetween min and max." Input="0" Type="double" Model="CDPSignal&lt;double&gt;" Name="AllowedInsideTempRange"/>
+  <Signal Description="The center of the allowed range." Input="0" Type="double" Model="CDPSignal&lt;double&gt;" Name="AllowedInsideTempRangeCenter"/>
+  <Signal Description="The range beetween min and max." Input="0" Type="double" Model="CDPSignal&lt;double&gt;" Name="AllowedMoistureRange"/>
+  <Signal Description="The center of the allowed range." Input="0" Type="double" Model="CDPSignal&lt;double&gt;" Name="AllowedMoistureRangeCenter"/>
+  <Signal Description="Shows if Greenhouse controller can irrigate to maximum value. If false, then controller tries to keep minimum irrigation value." Unit="" Input="0" Type="bool" Model="CDPSignal&lt;bool&gt;" Value="" Name="MaxIrrigationIsAllowed"/>
+ </Signals>
+ <Element Description="" LogEventOnChange="0" Type="double" SaveOnChange="1" Value="20" Name="MinAllowedInsideTemp" RouteMethod="RouteEvent"/>
+ <Element Description="" LogEventOnChange="0" Type="double" SaveOnChange="1" Value="26" Name="MaxAllowedInsideTemp" RouteMethod="RouteEvent"/>
+ <Element Description="Minimum soil moisture after which irrigation will be started, provied that irrigation can start in the first place." LogEventOnChange="0" Type="double" SaveOnChange="1" Value="40" Name="MinAllowedSoilMoisture" RouteMethod="RouteEvent"/>
+ <Element Description="Maximum soil moisture after which irrigation will be stopped." LogEventOnChange="0" Type="double" SaveOnChange="1" Value="60" Name="MaxAllowedSoilMoisture" RouteMethod="RouteEvent"/>
+ <Element Description="Time after which plants can be irrigated to the maximum allowed moisture." LogEventOnChange="0" Type="int" SaveOnChange="0" Value="22" Name="IrrigationStartHour" Value="22" RouteMethod="RouteEvent"/>
+ <Element Description="Time after which plants can not be irrigated to the maximum allowed soil moisture. After this time, minimum soil moisture is still kept." LogEventOnChange="0" Type="int" SaveOnChange="0" Value="2" Name="IrrigationEndHour" Value="02" RouteMethod="RouteEvent"/>
+ <Element Description="Time of one irrigation cycle duration in seconds. Does not contain Water absorption time." LogEventOnChange="0" Type="int" SaveOnChange="0" Value="10" Name="CycleDuration" Value="10" RouteMethod="RouteEvent"/>
+ <Element Description="Time for water to reach the proper spot in soil in seconds." LogEventOnChange="0" Type="int" SaveOnChange="1" Value="10" Name="WaterAbsorptionTime" RouteMethod="RouteEvent"/>
+</Model>
