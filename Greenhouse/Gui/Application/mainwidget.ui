@@ -1240,9 +1240,6 @@ Mode</string>
                   <string>CurrInsideTemp</string>
                  </stringlist>
                 </property>
-                <property name="reconnectCount">
-                 <number>1000</number>
-                </property>
                 <property name="graphPlottingMode">
                  <enum>CDP::GraphWidgets::GraphPlotting::Scrolling</enum>
                 </property>
