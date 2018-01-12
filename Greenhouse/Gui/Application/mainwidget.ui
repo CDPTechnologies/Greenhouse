@@ -1050,7 +1050,7 @@ Mode</string>
                          <number>0</number>
                         </property>
                         <property name="cdpStyleRouting" stdset="0">
-                         <string>GreenhouseApp.GreenhouseController.MaxIrrigationAllowed.Value</string>
+                         <string>GreenhouseApp.GreenhouseController.MaxIrrigationIsAllowed.Value</string>
                         </property>
                         <property name="widgetPicture" stdset="0">
                          <number>0</number>
